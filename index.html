@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Treehouse Page Builder</title>
+    <link rel="shortcut icon" href="https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/687/favicon.ico">
+    <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
+    <link href="dist/grapesjs-preset-webpage.min.css" rel="stylesheet">
+    <script src="//feather.aviary.com/imaging/v3/editor.js"></script>
+    <script src="https://static.filestackapi.com/v3/filestack-0.1.10.js"></script>
+    <script src="https://unpkg.com/grapesjs"></script>
+    <script src="dist/grapesjs-preset-webpage.min.js"></script>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="gjs" style="height:0px; overflow:hidden">
+
+      <style>
+  .lp-main-message-wrap {
+    background: url('https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/7/basement-fade-hdr.jpg') no-repeat left center;
+    background-size: cover;
+    }
+    .lp-main-message-wrap > .row {
+        height: 450px;
+        padding: 30px 0;
+    }
+    .lp-main-text {
+        text-align: center;
+        position: relative;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        top: 50%;
+    }
+    .lp-main-text span {
+        font-family: 'Cabin',sans-serif;
+    }
+    span.headline {
+        font-size: 60px;
+        line-height: 1.2em;
+        margin-bottom: 25px;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0px 3px 3px rgba(0,0,0,.5);
+        display: block;
+    }
+    span.subheadline {
+        display: inline-block;
+        font-size: 36px;
+        line-height: 100%;
+        padding: 30px 25px 35px;
+        color: #ffffff;
+        text-shadow: 0px 1px 0px rgb(0, 0, 0);
+        background: rgb(19, 172, 222);
+        border: 3px dashed #fff;
+    }
+    span.subheadline a {
+        color: #fff;
+        border-bottom: 2px dotted rgba(255,255,255,0);
+        padding-bottom: 3px;
+        transition: border-bottom .1s ease;
+    }
+    span.subheadline a:hover {
+        border-bottom: 3px dotted rgba(255,255,255,.5);
+    }
+    @media screen and (max-width: 1024px){
+        .lp-main-message-wrap > .row {
+            height: 350px;
+        }
+        span.headline {
+            font-size: 38px;
+            line-height: 42px;
+        }
+        span.subheadline {
+            font-size: 25px;
+            line-height: 32px;
+            display: inline-block;
+            padding: 20px 10px;   
+        }
+    }
+      </style>
+    </div>
+
+
+    <script type="text/javascript">
+      var editor = grapesjs.init({
+        height: '100%',
+        showOffsets: 1,
+        noticeOnUnload: 0,
+        storageManager: { autoload: 0 },
+        container: '#gjs',
+        fromElement: true,
+
+        plugins: ['gjs-preset-webpage'],
+        pluginsOpts: {
+          'gjs-preset-webpage': {
+            blocksBasicOpts: false,
+            countdownOpts: false,
+            formsOpts: false,
+            navbarOpts: false,
+            blocks: ['tbf-main-message'],
+            textCleanCanvas: 'Dump it?'
+          }
+        },
+        canvas: {
+                styles: ['https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css'],
+                scripts: ['https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js']
+        },
+        assetManager: {
+                assets: [
+                    { type: 'image', src : 'https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/48/atb-bg-new.png', height:553, width:242, name:'Image1'},
+                    { type: 'image', src : 'http://placehold.it/350x250/459ba8/fff/image2.jpg?text=Test1', height:350, width:250, name:'Image2'},
+                    { type: 'image', src : 'http://placehold.it/350x250/79c267/fff/image3.jpg?text=Test2', height:350, width:250, name:'Image3'},
+                    { type: 'image', src : 'http://placehold.it/350x250/c5d647/fff/image4.jpg?text=Test3', height:350, width:250, name:'Image4'},
+                    { type: 'image', src : 'http://placehold.it/350x250/f28c33/fff/image5.jpg?text=Test4', height:350, width:250, name:'Image5'},
+                    { type: 'image', src : 'http://placehold.it/350x250/e868a2/fff/image6.jpg?text=Test5', height:350, width:250, name:'Image6'},
+                    { type: 'image', src : 'http://placehold.it/350x250/cc4360/fff/image7.jpg?text=Test6', height:350, width:250, name:'Image7'},
+                ]
+        },
+        
+      });
+    </script>
+  </body>
+</html>
