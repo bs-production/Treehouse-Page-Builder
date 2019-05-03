@@ -6,10 +6,10 @@
     <link rel="shortcut icon" href="https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/687/favicon.ico">
     <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
     <link href="dist/grapesjs-preset-webpage.min.css" rel="stylesheet">
-    <script src="//feather.aviary.com/imaging/v3/editor.js"></script>
     <script src="https://static.filestackapi.com/v3/filestack-0.1.10.js"></script>
     <script src="https://unpkg.com/grapesjs"></script>
     <script src="dist/grapesjs-preset-webpage.min.js"></script>
+
     <style>
       body,
       html {
@@ -27,6 +27,11 @@
         height: '100%',
         showOffsets: 1,
         noticeOnUnload: 0,
+        protectedCss: '',
+        clearStyles: true,
+        avoidDefaults: true,
+        avoidInlineStyle: true,
+        keepUnusedStyles: 0,
         storageManager: {
           id: 'gjs-',
           type: 'local',
@@ -39,9 +44,10 @@
           storeCss: true,
         },
         container: '#gjs',
-        fromElement: true,
+        fromElement: false,
 
-        plugins: ['gjs-preset-webpage'],
+        plugins: ['gjs-preset-webpage', editor => editor.on('log-parser-poscss', console.log),
+          'grapesjs-parser-postcss'],
         pluginsOpts: {
           'gjs-preset-webpage': {
             blocksBasicOpts: false,
@@ -66,8 +72,11 @@
                     { type: 'image', src : 'http://placehold.it/350x250/cc4360/fff/image7.jpg?text=Test6', height:350, width:250, name:'Image7'},
                 ]
         },
-        
+        styleManager: {
+        clearProperties: true,
+        }
       });
+      window.editor = editor;
     </script>
   </body>
 </html>

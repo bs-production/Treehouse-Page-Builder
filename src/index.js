@@ -12,8 +12,15 @@ import blocks from './blocks';
 import components from './components';
 import panels from './panels';
 import styles from './styles';
+import parser from './parser';
 
 export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) => {
+  const options = { ...{
+    // default options
+  },  ...opts };
+
+  editor.setCustomParserCss(parser);
+  
   let config = opts;
 
   let defaults = {

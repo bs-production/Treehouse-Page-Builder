@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-preset-webpage",
-  "version": "0.1.15",
+  "version": "0.1.17",
   "description": "GrapesJS Plugin Webpage Preset",
   "main": "dist/grapesjs-preset-webpage.min.js",
   "scripts": {
@@ -31,9 +31,6 @@
       "transform-object-rest-spread"
     ]
   },
-  "peerDependencies": {
-    "grapesjs": "0.x"
-  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -46,12 +43,16 @@
     "webpack-dev-server": "^2.11.2"
   },
   "dependencies": {
+    "grapesjs": "^0.14.61",
     "grapesjs-aviary": "^0.1.2",
     "grapesjs-blocks-basic": "^0.1.7",
     "grapesjs-component-countdown": "^0.1.2",
     "grapesjs-navbar": "^0.1.5",
+    "grapesjs-parser-postcss": "^0.1.1",
     "grapesjs-plugin-export": "^0.1.5",
     "grapesjs-plugin-filestack": "^0.1.1",
-    "grapesjs-plugin-forms": "^0.3.5"
+    "grapesjs-plugin-forms": "^0.3.5",
+    "jest": "^24.7.1",
+    "postcss": "^7.0.14"
   }
 }
